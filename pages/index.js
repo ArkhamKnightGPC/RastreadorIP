@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import dynamic from "next/dynamic"
 import Title from '../components/title'
 import TableCol from '../components/tablecol'
+import Background from '../components/background'
 
 const Home = () => {
 
@@ -11,8 +12,8 @@ const Home = () => {
   const [TimeZone, setTimezone] = useState("UTC -5:00")
   const [ISP, setISP] = useState("SpaceX Starlink")
 
-  const [Latitude, setLatitude] = useState(+51.505)
-  const [Longitude, setLongitude] = useState(-0.09)
+  const [Latitude, setLatitude] = useState(+40.65)
+  const [Longitude, setLongitude] = useState(-73.95)
   const [userInput, setUserInput] = useState("")
 
   const getAPIresponse = async () => {
@@ -22,7 +23,7 @@ const Home = () => {
       if(regexExp.test(userInput))
           APIurl = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_deJ9HUJkVpvqratzl0MwX39OW5hsA&ipAddress=' + userInput
       else
-          APIurl = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_deJ9HUJkVpvqratzl0MwX39OW5hsA&domain' + userInput
+          APIurl = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_deJ9HUJkVpvqratzl0MwX39OW5hsA&domain=' + userInput
       const APIresponse = await fetch(APIurl).then(response => response.json())
       return APIresponse
   }
@@ -53,7 +54,7 @@ const Home = () => {
 
   const DynamicMap = dynamic(
     () => {
-      return import('../components/map')
+      return import('../components/map.js')
     },
     { ssr: false }
   );
