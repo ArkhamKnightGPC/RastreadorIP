@@ -1,12 +1,12 @@
-## Rastreador IP
+## IP tracker
 
-Esse projeto foi baseado no desafio [frontendmentor: IP Address Tracker](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0) utilizando a API [IP Geolocation API](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0) e o pacote [react-leaflet](https://react-leaflet.js.org/).
+This project was based on the [frontendmentor: IP Address Tracker](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0) challenge using the [IP Geolocation API](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0) and the [react-leaflet](https://react-leaflet.js.org/) package.
 
 ![Screenshot](/screenshot.png)
 
-## Como executar localmente ?
+## How to run locally?
 
-As instruções a serem usadas são
+The instructions to be used are
 
 > npm i
 
